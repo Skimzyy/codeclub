@@ -1,8 +1,10 @@
 #PASSWORD GENERATOR
-import random
+import string
+import secrets
 
 number = 7
-string ='abcdefghijklmnopqrstuvwxyz0123456789'
+alphabet = string.ascii_letters + string.digits
+print (alphabet)
 
 
 def generatePassword():
@@ -14,9 +16,9 @@ def generatePassword():
         if (len(ask)== number):
             get = " "
             #The loop that returns the length of the password
-            for i in range(8):
+            for i in range(10):
                 #Generates a random password
-                get += string[random.randint(0, 36)]
+                get += ''.join(secrets.choice(alphabet)) 
             #Prints the password
             print("Your password is: {} ".format(get))
             break
