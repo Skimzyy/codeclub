@@ -1,4 +1,5 @@
 #Bubble sort algorithm using python
+#AUthor Ogundimu Royan
 
 def bubbleSort(arr):
     n = len(arr)
